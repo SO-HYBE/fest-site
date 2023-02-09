@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+html{
+    font-family: 'Poppins';
+    background-color: black;
+
+}
+
+#home:before{
+    color: rgb(148 163 184);
+}
+
+#home {
+    display: inline-block;
+    position: relative;
+  }
+  
+  #home:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(238,54,0);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  #home:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+#about:before{
+    color: rgb(148 163 184);
+}
+
+#about {
+    display: inline-block;
+    position: relative;
+  }
+  
+  #about:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(37,124,222);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  #about:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+
+#events:before{
+    color: rgb(148 163 184);
+}
+
+#events {
+    display: inline-block;
+    position: relative;
+  }
+  
+  #events:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(218,119,30);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  #events:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+
+#contact:before{
+    color: rgb(148 163 184);
+}
+
+#contact {
+    display: inline-block;
+    position: relative;
+  }
+  
+  #contact:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(53,136,135);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  #contact:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }

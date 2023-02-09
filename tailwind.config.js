@@ -1,0 +1,24 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "src/App.tsx"
+
+  ],
+  theme: {
+    extend: {
+      colors: {
+        'pure-red': '#ee3600',
+        'bright-blue': '#257cde',
+        'vivid-orange': '#da771e',
+        'dark-moderate-cyan': '#358887',
+        'lime-green': '#00b480',
+        'mod-lime-green': '#65d15d'
+      },
+      scale: {
+        '85': '0.85',
+        '80': '0.80'
+      }
+    },
+  },
+  plugins: [],
+}
