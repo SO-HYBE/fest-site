@@ -1,8 +1,23 @@
 import React from 'react';
 import './App.css';
 import head from './images/head.png'
-import main from './videos/background.mp4'
+import main from './videos/ultima.mp4'
 function App() {
+
+  const observer = new IntersectionObserver((entries:any) => {
+    entries.forEach((entry:any) => {
+        console.log(entry)
+        if (entry.isIntersecting) {
+          entry.target.classList.add('boooo');
+        } else {
+          entry.target.classList.remove('boooo');
+        }
+    });
+  });
+
+  const hiddenElements = document.querySelectorAll('.unknown');
+  hiddenElements.forEach((el) => observer.observe(el));
+
   return (
       <div className='App'>
         <div className='header relative w-full'>
@@ -18,10 +33,23 @@ function App() {
             </ul>
           </div>
         </div>
-        <div className='bg-clip-padding self-center scale-70' >
-          <h3 className='font-semibold text-8xl text-white '>WELCOME TO THE</h3>
-          <video autoPlay loop muted plays-inline="true" id='video' className='opacity-50 absolute -z-[1]'> <source src={main} type='video/mp4' /> </video>
+        <div className='bg-clip-padding w-full whitespace-pre' >
+          <video autoPlay loop muted plays-inline="true" id='video' className='opacity-50 absolute -z-[1] self-center w-full'> <source src={main} type='video/mp4' /></video>
+          <h3>
+          <span className='font-semibold text-5xl text-white inline-block self-center w-50 mt-44 ml-[350px] '>WELCOME TO THE</span>
+          <br />
+          <span className='font-bold text-[180px] text-white inline-block self-center w-50 mt-30 ml-[400px] '>"EXTRA</span>
+          <br />
+          <span className='font-bold text-[180px] text-white inline-block self-center w-50 mt-30 ml-[400px] '> ORDINARY"</span>
+          <br />
+          <span className='font-bold text-6xl text-mid-gray inline-block self-center w-50 mt-[50px] ml-[300px] whitespace-pre'>AN </span>
+          <span className='font-bold text-6xl text-mid-gray inline-block self-center w-50 mt-[50px] whitespace-pre'>EXCEPTIONAL </span>
+          <span className='font-bold text-6xl text-mid-gray inline-block self-center w-50 mt-[50px] whitespace-pre'>EVENT </span>
+          <span className='font-bold text-6xl text-mid-gray inline-block self-center w-50 mt-[50px] whitespace-pre'>MANAGMENT </span>
+          <span className='font-bold text-6xl text-mid-gray inline-block self-center w-50 mt-[50px] whitespace-pre'>AGENCY  </span>          
+          </h3>
         </div>
+        <div></div>
       </div>
     )
 }

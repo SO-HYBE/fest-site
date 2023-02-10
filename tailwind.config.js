@@ -12,7 +12,8 @@ module.exports = {
         'vivid-orange': '#da771e',
         'dark-moderate-cyan': '#358887',
         'lime-green': '#00b480',
-        'mod-lime-green': '#65d15d'
+        'mod-lime-green': '#65d15d',
+        'mid-gray': "rgb(244,244,244)"
       },
       scale: {
         '85': '0.85',
