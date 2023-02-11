@@ -4,34 +4,8 @@ import head from './images/head.png';
 import main from './videos/ultima.mp4';
 import foot from './images/main.png';
 import intro from './images/intro.jpg';
-
+import ScrollButton from './components/ScrollButton';
 function App() {
-
-  let mybutton : any = document.getElementById("btn-back-to-top");
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function () {
-  scrollFunction();
-};
-
-function scrollFunction() {
-  if (
-    document.body.scrollTop > 20 ||
-    document.documentElement.scrollTop > 20
-  ) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
-// When the user clicks on the button, scroll to the top of the document
-mybutton.addEventListener("click", backToTop);
-
-function backToTop() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
-
   const handleEventScroll = () => {
     const eventer = document.getElementById('event-sec');
     if (eventer) {
@@ -39,7 +13,7 @@ function backToTop() {
     }
   }
 
-  const handleAboutScroll = () : void => {
+  const handleAboutScroll = () => {
     const abouter  = document.getElementById('about-sec');    
     if (abouter) {
       abouter.scrollIntoView({ behavior: 'smooth' });
@@ -52,8 +26,12 @@ function backToTop() {
       contacter.scrollIntoView({ behavior: 'smooth' });
     }
   }
+  
   return (
       <div className='App scroll-smooth'>
+        
+        <ScrollButton />
+
         <div className='header relative w-full fixed z-[3]'>
             <ul className='flex flex-row pt-6 pb-6'>
             <li className='basis-1/4 align-bottom text-center self-center' ><a href='#' id='home' className='text-slate-400 hover:text-white hover:font-bold rounded-l-lg hover:tracking-widest'>Home</a></li>
@@ -83,10 +61,15 @@ function backToTop() {
         </div>
         <div className='intro flex flex-row justify-center mt-[100px]' id='about-sec'>
           <div className=''>
-            <img src={intro} className='opacity-70' alt="event agency" />
+            <img src={intro} className='opacity-70 border-inherit	border-2	rounded hover:rounded-lg hover:border-4 transition delay-150 duration-300  ease-in-out ' alt="event agency" />
           </div>
           <div className='flex flex-col justify-around items-center'>
-            <h5 className='text-center text-4xl font-bold'>Who Are We?</h5>
+            <h5 className='text-center text-4xl font-bold mb-[20px]'>Who Are We?</h5>
+
+            <h4 className='intro-p'>
+              We Have Been Happily Serving Customers For Over 30 Years
+            </h4>
+
             <p className='mx-10 text-xl'>Welcome to Festival International Event
                 Association, a dynamic and innovative
                 start-up that provides comprehensive event
@@ -164,9 +147,6 @@ function backToTop() {
         </div>
         </footer>
 
-        <button type="button" data-mdb-ripple="true" data-mdb-ripple-color="light" className="inline-block p-3 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out bottom-5 right-5" id="btn-back-to-top">
-          <svg aria-hidden="true" focusable="false" data-prefix="fas" className="w-4 h-4" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"></path></svg>
-        </button>
 
       </div>
     )
