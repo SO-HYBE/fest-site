@@ -18,7 +18,10 @@ module.exports = {
       scale: {
         '85': '0.85',
         '80': '0.80'
-      }
+      },
+      backgroundImage: {
+        'event-back': "url('./images/nghnh.png')",
+      },
     },
   },
   plugins: [],
