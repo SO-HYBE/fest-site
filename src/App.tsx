@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import head from './images/head.png';
 import main from './videos/ultima.mp4';
 import foot from './images/main.png';
 import intro from './images/intro.jpg';
+import eventt from './images/opaci.png';
+import event2 from './images/opaci2.png'
 import ScrollButton from './components/ScrollButton';
+import Aos from 'aos';
+import "aos/dist/aos.css"
+
 function App() {
+  useEffect(() => {
+    Aos.init({duration: 3000});
+  }, []);
+
   const handleEventScroll = () => {
     const eventer = document.getElementById('event-sec');
     if (eventer) {
@@ -59,9 +68,9 @@ function App() {
           </h3>
           <video autoPlay loop muted plays-inline="true" id='video' className='opacity-50 self-center w-full relative z-0'> <source src={main} type='video/mp4' /></video>
         </div>
-        <div className='intro flex flex-row justify-center mt-[100px]' id='about-sec'>
-          <div className=''>
-            <img src={intro} className='opacity-70 border-inherit	border-2	rounded hover:rounded-lg hover:border-4 transition delay-150 duration-300  ease-in-out ' alt="event agency" />
+        <div className='intro flex flex-row justify-center mt-[100px] mb-[100px]' id='about-sec'>
+        <div>
+            <img src={intro} data-aos="fade-up" className='opacity-70 border-inherit	border-2	rounded hover:rounded-lg hover:border-4 transition duration-300  ease-out ' alt="event agency" />
           </div>
           <div className='flex flex-col justify-around items-center'>
             <h5 className='text-center text-4xl font-bold mb-[20px]'>Who Are We?</h5>
@@ -79,7 +88,12 @@ function App() {
                 seamless and hassle-free experiences to
                 both event organizers and attendees.</p>
           </div>
-        </div>          
+        </div>
+        <div 
+        className='image-bg dark-overlay flex flex-row justify-center items-center'
+        style={{backgroundImage: `url(${eventt})`}}        
+        >   <h2 className='parat text-[180px]'>AWESOME</h2>
+        </div>                  
         <div className='column px-8 pt-[100px] pb-[10px]' id='event-sec'>
             <h2 className='events-header'>UPCOMING EVENTS.</h2>
         </div>
@@ -101,8 +115,12 @@ function App() {
               </ul>
           </div>
         </section>
-
-        <footer className='w-full flex items-center justify-center bg-black' id='contact-sec'>
+        <div 
+        className='image-bg dark-overlay flex flex-row justify-center items-center'
+        style={{backgroundImage: `url(${event2})`}}        
+        >   <h2 className='parat text-[180px]'>EVENTS</h2>
+        </div>
+        <footer className='w-full flex items-center justify-center bg-black mt-[60px]' id='contact-sec'>
         <div className="md:w-2/3 w-full px-4 text-white flex flex-col">
             <div className="w-full text-7xl font-bold">
                 <h1 className="w-full md:w-2/3">How can we help you. get
