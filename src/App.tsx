@@ -79,7 +79,7 @@ function App() {
               We Have Been Happily Serving Customers For Over 30 Years
             </h4>
 
-            <p className='mx-10 text-xl'>Welcome to Festival International Event
+            <p className='mx-10 text-xl text-center	'>Welcome to Festival International Event
                 Association, a dynamic and innovative
                 start-up that provides comprehensive event
                 management and ticket booking services.
