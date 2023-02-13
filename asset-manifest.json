@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/fest.site/static/css/main.86488261.css",
+    "main.js": "/fest.site/static/js/main.e61e1031.js",
+    "static/media/ultima.mp4": "/fest.site/static/media/ultima.d648eb9a648f8179d8cd.mp4",
+    "static/media/opaci.png": "/fest.site/static/media/opaci.b2352099dbd3f36eced3.png",
+    "static/media/opaci2.png": "/fest.site/static/media/opaci2.7c2e7628bb2579398b57.png",
+    "static/media/intro.jpg": "/fest.site/static/media/intro.acf0acf35104e26e60f6.jpg",
+    "static/media/main.png": "/fest.site/static/media/main.a4862057eb21c398c5c2.png",
+    "static/media/head.png": "/fest.site/static/media/head.98f0450234a1c58d8d2c.png",
+    "index.html": "/fest.site/index.html",
+    "main.86488261.css.map": "/fest.site/static/css/main.86488261.css.map",
+    "main.e61e1031.js.map": "/fest.site/static/js/main.e61e1031.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.86488261.css",
+    "static/js/main.e61e1031.js"
+  ]
+}
